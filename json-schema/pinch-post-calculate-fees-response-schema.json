@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/pinch/main/json-schema/pinch-post-calculate-fees-response-schema.json",
+  "title": "PostCalculateFeesResponse",
+  "x-generated": "2026-10-12",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/pinch-openapi-generated.yml#/components/schemas/PostCalculateFeesResponse",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": "integer",
+      "description": "The gross payment amount in cents"
+    },
+    "feeAmount": {
+      "type": "integer",
+      "description": "The total processing fee in cents (includes GST)"
+    },
+    "taxAmount": {
+      "type": "integer",
+      "description": "The GST component of the fee, in cents"
+    },
+    "netAmount": {
+      "type": "integer",
+      "description": "What will be settled to your account after fees"
+    }
+  }
+}

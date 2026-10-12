@@ -1,0 +1,15 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.getpinch.com.au/docs/versioning.md
+sources:
+- https://docs.getpinch.com.au/docs/versioning.md
+- https://docs.getpinch.com.au/docs/versioning
+- https://docs.getpinch.com.au/docs/get-started-with-the-pinch-api.md
+- https://docs.getpinch.com.au/docs/getting-started-with-pinch-zapier-integration.md
+versioning:
+  how_selected: header
+  docs: 'pinch-version header (e.g., pinch-version: 2020.1)'
+deprecation: {}
+status_page: null
+docs: https://docs.getpinch.com.au/docs/versioning.md

@@ -1,0 +1,203 @@
+{
+  "@context": {
+    "@vocab": "https://bookpinch.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "pinch": "https://bookpinch.com/schema#",
+    "PostCalculateFeesRequest": "pinch:PostCalculateFeesRequest",
+    "amount": {
+      "@id": "pinch:amount",
+      "@type": "xsd:integer"
+    },
+    "sourceType": {
+      "@id": "pinch:sourceType",
+      "@type": "xsd:string"
+    },
+    "PostCalculateFeesResponse": "pinch:PostCalculateFeesResponse",
+    "feeAmount": {
+      "@id": "pinch:feeAmount",
+      "@type": "xsd:integer"
+    },
+    "taxAmount": {
+      "@id": "pinch:taxAmount",
+      "@type": "xsd:integer"
+    },
+    "netAmount": {
+      "@id": "pinch:netAmount",
+      "@type": "xsd:integer"
+    },
+    "PostConnectTokenResponse": "pinch:PostConnectTokenResponse",
+    "access_token": {
+      "@id": "pinch:access_token",
+      "@type": "xsd:string"
+    },
+    "expires_in": {
+      "@id": "pinch:expires_in",
+      "@type": "xsd:integer"
+    },
+    "token_type": {
+      "@id": "pinch:token_type",
+      "@type": "xsd:string"
+    },
+    "GetFeesCalculateResponse": "pinch:GetFeesCalculateResponse",
+    "fee": {
+      "@id": "pinch:fee",
+      "@type": "xsd:integer"
+    },
+    "total": {
+      "@id": "pinch:total",
+      "@type": "xsd:integer"
+    },
+    "PostMerchantsMerchantidRequest": "pinch:PostMerchantsMerchantidRequest",
+    "companyName": {
+      "@id": "pinch:companyName",
+      "@type": "xsd:string"
+    },
+    "contactFirstName": {
+      "@id": "pinch:contactFirstName",
+      "@type": "xsd:string"
+    },
+    "contactLastName": {
+      "@id": "pinch:contactLastName",
+      "@type": "xsd:string"
+    },
+    "contactEmail": {
+      "@id": "pinch:contactEmail",
+      "@type": "xsd:string"
+    },
+    "contactPhone": {
+      "@id": "pinch:contactPhone",
+      "@type": "xsd:string"
+    },
+    "abn": {
+      "@id": "pinch:abn",
+      "@type": "xsd:string"
+    },
+    "PostPayersPayeridSourcesRequest": "pinch:PostPayersPayeridSourcesRequest",
+    "token": {
+      "@id": "pinch:token",
+      "@type": "xsd:string"
+    },
+    "PostPaymentsRequest": "pinch:PostPaymentsRequest",
+    "PostPaymentsRealtimeRequest": "pinch:PostPaymentsRealtimeRequest",
+    "GetPlansResponse": "pinch:GetPlansResponse",
+    "plans": {
+      "@id": "pinch:plans",
+      "@container": "@list"
+    },
+    "PostPlansRequest": "pinch:PostPlansRequest",
+    "id": {
+      "@id": "pinch:id",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "pinch:name",
+      "@type": "xsd:string"
+    },
+    "payments": {
+      "@id": "pinch:payments",
+      "@type": "xsd:string"
+    },
+    "PostPlansResponse": "pinch:PostPlansResponse",
+    "plan": {
+      "@id": "pinch:plan"
+    },
+    "GetPlansPlanidResponse": "pinch:GetPlansPlanidResponse",
+    "PostRefundsRequest": "pinch:PostRefundsRequest",
+    "paymentId": {
+      "@id": "pinch:paymentId",
+      "@type": "xsd:string"
+    },
+    "reason": {
+      "@id": "pinch:reason",
+      "@type": "xsd:string"
+    },
+    "nonce": {
+      "@id": "pinch:nonce",
+      "@type": "xsd:string"
+    },
+    "PostRefundsResponse": "pinch:PostRefundsResponse",
+    "refundFeeCharged": {
+      "@id": "pinch:refundFeeCharged",
+      "@type": "xsd:integer"
+    },
+    "refundedFees": {
+      "@id": "pinch:refundedFees",
+      "@type": "xsd:integer"
+    },
+    "PostRefundsNonceRequest": "pinch:PostRefundsNonceRequest",
+    "PostSourcesRequest": "pinch:PostSourcesRequest",
+    "payerId": {
+      "@id": "pinch:payerId",
+      "@type": "xsd:string"
+    },
+    "PostSourcesResponse": "pinch:PostSourcesResponse",
+    "last4": {
+      "@id": "pinch:last4",
+      "@type": "xsd:string"
+    },
+    "expiryMonth": {
+      "@id": "pinch:expiryMonth",
+      "@type": "xsd:integer"
+    },
+    "expiryYear": {
+      "@id": "pinch:expiryYear",
+      "@type": "xsd:integer"
+    },
+    "GetSubscriptionsResponse": "pinch:GetSubscriptionsResponse",
+    "subscriptions": {
+      "@id": "pinch:subscriptions",
+      "@container": "@list"
+    },
+    "PostSubscriptionsRequest": "pinch:PostSubscriptionsRequest",
+    "planId": {
+      "@id": "pinch:planId",
+      "@type": "xsd:string"
+    },
+    "totalAmount": {
+      "@id": "pinch:totalAmount",
+      "@type": "xsd:string"
+    },
+    "startDate": {
+      "@id": "pinch:startDate",
+      "@type": "xsd:string"
+    },
+    "currency": {
+      "@id": "pinch:currency",
+      "@type": "xsd:string"
+    },
+    "sourceId": {
+      "@id": "pinch:sourceId",
+      "@type": "xsd:string"
+    },
+    "PostSubscriptionsResponse": "pinch:PostSubscriptionsResponse",
+    "subscription": {
+      "@id": "pinch:subscription"
+    },
+    "GetSubscriptionsPayerPayeridResponse": "pinch:GetSubscriptionsPayerPayeridResponse",
+    "GetSubscriptionsPlanPlanidResponse": "pinch:GetSubscriptionsPlanPlanidResponse",
+    "GetTestPlansPlnXxxxxxxxCalculatedPaymentsResponse": "pinch:GetTestPlansPlnXxxxxxxxCalculatedPaymentsResponse",
+    "PostTestTestidResponse": "pinch:PostTestTestidResponse",
+    "PostWebhooksRequest": "pinch:PostWebhooksRequest",
+    "url": {
+      "@id": "pinch:url",
+      "@type": "xsd:string"
+    },
+    "eventTypes": {
+      "@id": "pinch:eventTypes",
+      "@type": "xsd:string"
+    },
+    "format": {
+      "@id": "pinch:format",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Pinch API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Pinch's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-12) from openapi/_ae-authored/pinch-openapi-generated.yml.",
+  "dcterms:created": "2026-10-12",
+  "dcterms:source": [
+    "openapi/_ae-authored/pinch-openapi-generated.yml"
+  ]
+}

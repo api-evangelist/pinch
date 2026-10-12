@@ -1,0 +1,32 @@
+generated: '2026-10-12'
+method: probed
+source: https://www.bookpinch.com/privacy-policy
+signals:
+  data_retention:
+    evidence:
+      - source: https://www.bookpinch.com/privacy-policy
+        http_status: 200
+        fetched: "true"
+        quote: "Information described in \"Information collected through the Telehealth Program\" to hand you off to the Telehealth Platform Provider, to credit your Pinch clinician of record, to measure enrollment and retention, and, where authorized, to coordinate your in-person care with your telehealth care."
+    note: Describes retention of data collected via telehealth services.
+  support_lifetime:
+    evidence:
+      - source: https://www.bookpinch.com/privacy-policy
+        http_status: 200
+        fetched: "true"
+        quote: "Pinch Med, Inc. is a management services organization. It operates the Pinch websites described in the Scope section below and provides administrative, technology, and marketing support to the affiliated professional entities..."
+    note: Indicates ongoing support and management of user data.
+  age_assurance:
+    evidence:
+      - source: https://www.bookpinch.com/privacy-policy
+        http_status: 200
+        fetched: "true"
+        quote: "Please note that our Services are designed for users in the United States only and are not intended for users outside the United States, or for anyone under the age of 18."
+    note: States age restriction for users.
+  ai_transparency:
+    evidence:
+      - source: https://www.bookpinch.com/privacy-policy
+        http_status: 200
+        fetched: "true"
+        quote: "This Privacy Policy applies to ... the Pinch‑branded pages of our telehealth program, which are hosted at rx.bookpinch.com, rxintake.bookpinch.com, and care.bookpinch.com."
+    note: Mentions AI‑related services via telehealth platform.

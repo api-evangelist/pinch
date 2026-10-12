@@ -1,25 +1,138 @@
 aid: pinch
+
 name: Pinch
-description: 'Pinch is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by starting-line-vc) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.sanity.io/images/98lcnac0/production/0a4bcd959a4eab98b8cf8add62ab1244db0c6462-4000x2667.jpg
+
+description: Pinch provides an at‑home medical spa experience combined with a payments platform that enables businesses to accept online payments
+  for aesthetic treatments. The company offers a suite of APIs for managing customers, processing credit‑card and direct‑debit transactions, handling
+  subscriptions, and integrating with third‑party services. Documentation includes guides, reference API specs, and SDKs for multiple languages,
+  supporting developers to build seamless checkout flows for health‑and‑beauty services.
+
 url: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-12 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-12'
+
 modified: '2026-10-12'
+
 tags:
 - Company
-apis: []
+- Payments
+- MedicalSpa
+- API
+- HealthTech
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- starting-line-vc
+
 common:
+- type: Spectral
+  url: rules/pinch-rules.yml
+- type: JSONLD
+  url: json-ld/pinch-context.jsonld
+- type: Vocabulary
+  url: vocabulary/pinch-vocabulary.yml
+- type: DataModel
+  url: data-model/pinch-data-model.yml
+- type: ChangeLog
+  url: changelog/pinch-changelog.yml
+- type: Conventions
+  url: conventions/pinch-conventions.yml
+- type: Authentication
+  url: authentication/pinch-authentication.yml
+- type: Lifecycle
+  url: lifecycle/pinch-lifecycle.yml
+- type: Conformance
+  url: conformance/pinch-conformance.yml
+- type: LLMsTxt
+  url: llms/pinch-llms.txt
+- type: WellKnown
+  url: well-known/pinch-well-known.yml
+- type: Hosts
+  url: hosts/pinch-hosts.yml
+- type: Vendors
+  url: vendors/pinch-vendors.yml
+- type: DomainSecurity
+  url: security/pinch-domain-security.yml
 - type: Website
   url: https://bookpinch.com
+- type: DeveloperPortal
+  url: https://docs.getpinch.com.au
+- type: Documentation
+  url: https://docs.getpinch.com.au
+- type: APIReference
+  url: https://docs.getpinch.com.au/reference
+- type: GettingStarted
+  url: https://docs.getpinch.com.au/docs/get-started-with-the-pinch-api
+- type: Support
+  url: https://helpdesk.getpinch.com.au
+- type: Blog
+  url: https://blog.getpinch.com.au
+- type: GitHubOrganization
+  url: https://github.com/PinchPayments
+- type: Pricing
+  url: https://docs.getpinch.com.au/docs/plans-and-subscriptions
+- type: TermsOfService
+  url: https://www.bookpinch.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.bookpinch.com/privacy-policy
+
+apis:
+- name: Pinch API
+  description: API for Pinch payments and medical spa services
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: null
+  aid: pinch:pinch-api-2
+- aid: pinch:pinch-api
+  name: Pinch API
+  description: 'Pinch API as documented publicly: 41 operations. Contract generated from the documentation by API Evangelist (2026-10-12); not
+
+    the provider''s own document.'
+  humanURL: https://docs.getpinch.com.au/reference/tokens.md
+  baseURL: https://api.getpinch.com.au
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/pinch-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+
+x-backed-by:
+- starting-line-vc
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs site returns HTTP 429 rate limit errors, preventing access to machine‑readable spec.
+  evidence:
+  - url: https://docs.getpinch.com.au/reference
+    status: 429
+  checked: '2026-10-12'
+x-enrichment:
+  date: '2026-10-12'
+  status: enriched
+  artifacts_added: 27
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,21 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.getpinch.com.au/docs/get-started-with-the-pinch-api.md
+sources:
+- https://docs.getpinch.com.au/docs/get-started-with-the-pinch-api.md
+- https://docs.getpinch.com.au/docs/getting-started-with-pinch-zapier-integration.md
+- https://docs.getpinch.com.au/docs/getting-started-with-pinch-n8n.md
+- https://docs.getpinch.com.au/docs/getting-started-with-pinch-viasocket-integration.md
+idempotency:
+  coverage: none
+  evidence: No idempotency mechanism is documented in the provided pages.
+pagination:
+  style: page-based
+  params:
+  - page
+  - page size
+  evidence: When listing payers or payment links you can use the **Page** and **Page Size** parameters. Maximum page size is 500 items.
+versioning: 'Always include the `pinch-version` header in every API request (e.g., `pinch-version: 2020.1`).'
+authentication: Authentication uses the Application ID and Secret Key obtained from the Pinch dashboard (API keys).
+docs: https://docs.getpinch.com.au/docs/get-started-with-the-pinch-api.md

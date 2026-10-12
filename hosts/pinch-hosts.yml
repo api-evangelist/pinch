@@ -1,0 +1,140 @@
+generated: '2026-10-12'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 4
+  other_domain: 5
+  platform: 1
+  roles:
+  - api
+  - legal
+  - marketing
+  - other
+  - portal
+  - source
+  - support
+  - website
+hosts:
+- host: api.bookpinch.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bookpinch.com
+  role: api
+  relation: own
+- host: api.com.au
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.com.au
+  role: api
+  relation: other-domain
+- host: api.getpinch.com.au
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: getpinch.com.au
+  role: api
+  relation: other-domain
+- host: blog.getpinch.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: getpinch.com.au
+  role: marketing
+  relation: other-domain
+- host: bookpinch.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: bookpinch.com
+  role: website
+  relation: own
+- host: docs.getpinch.com.au
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Pricing
+  serves:
+  - docs
+  - cdn
+  - documentation
+  vendor: cloudflare
+  registrable_domain: getpinch.com.au
+  role: portal
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: helpdesk.getpinch.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - hosting
+  vendor: hubspot
+  registrable_domain: getpinch.com.au
+  role: support
+  relation: other-domain
+- host: shop.bookpinch.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  platform: shopify.com
+  registrable_domain: bookpinch.com
+  role: other
+  relation: own
+- host: www.bookpinch.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: bookpinch.com
+  role: legal
+  relation: own

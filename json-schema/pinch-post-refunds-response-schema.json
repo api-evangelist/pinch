@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/pinch/main/json-schema/pinch-post-refunds-response-schema.json",
+  "title": "PostRefundsResponse",
+  "x-generated": "2026-10-12",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/pinch-openapi-generated.yml#/components/schemas/PostRefundsResponse",
+  "type": "object",
+  "properties": {
+    "refundFeeCharged": {
+      "type": "integer",
+      "description": "The fee amount (in cents) that was not returned as part of this refund"
+    },
+    "refundedFees": {
+      "type": "integer",
+      "description": "Any fees that were returned (if applicable)"
+    }
+  }
+}

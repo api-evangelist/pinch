@@ -1,0 +1,29 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.getpinch.com.au/docs/application-authentication.md
+sources:
+- https://docs.getpinch.com.au/docs/application-authentication.md
+- https://docs.getpinch.com.au/reference/tokens.md
+- https://docs.getpinch.com.au/reference/tokens
+- https://docs.getpinch.com.au/docs/application-authentication
+description: Pinch API authentication
+schemes:
+- type: oauth2
+  name: OAuth 2.0 client credentials
+  evidence: The Pinch API uses **OAuth 2.0 client credentials** for authentication. Every API request requires a Bearer token, which you obtain
+    by exchanging your **Application ID** and **Secret Key**.
+  flows:
+  - client_credentials
+  token_url: https://auth.getpinch.com.au/connect/token
+  scopes:
+  - api1
+  how_to_obtain: Make a POST request to the token endpoint with your Application ID and Secret Key using HTTP Basic Auth or by including `client_id`
+    and `client_secret` in the form‑encoded body.
+- type: http-bearer
+  name: Bearer token
+  evidence: 'Include the token in the `Authorization` header of every API request:'
+  location: header
+  header: Authorization
+  how_to_obtain: Obtain the token via the OAuth 2.0 client credentials flow described above.
+docs: https://docs.getpinch.com.au/docs/application-authentication.md

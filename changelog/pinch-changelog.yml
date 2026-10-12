@@ -1,0 +1,30 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.getpinch.com.au/docs/versioning.md
+sources:
+- https://docs.getpinch.com.au/docs/versioning.md
+- https://docs.getpinch.com.au/docs/versioning
+entries:
+- breaking: false
+  highlights:
+  - Stable, long-running version.
+  - Uses `nonce` for replay protection on payments and refunds.
+  version: '2020.1'
+- breaking: false
+  highlights:
+  - Updated the Merchant endpoints to add/retrieve more data especially contact information for both the company and the primary contact at that
+    company.
+  - Brought Merchants and Managed Merchants into line so they have the same properties.
+  version: '2019.1'
+- breaking: false
+  highlights:
+  - Added credit card endpoints and the concept of payment sources.
+  version: '2017.2'
+- breaking: false
+  highlights:
+  - The initial public release of the Pinch API.
+  version: '2017.1'
+current_version: '2020.1'
+note: Versioning scheme uses a year.major format (e.g., 2020.1).
+docs: https://docs.getpinch.com.au/docs/versioning.md

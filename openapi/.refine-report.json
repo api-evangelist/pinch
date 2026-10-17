@@ -1,0 +1,32 @@
+{
+  "provider": "pinch",
+  "sources": [
+    "_ae-authored/pinch-openapi-generated.yml"
+  ],
+  "outputs": [
+    "pinch-calculate-fees-api-openapi.yml",
+    "pinch-connect-api-openapi.yml",
+    "pinch-fees-api-openapi.yml",
+    "pinch-merchants-api-openapi.yml",
+    "pinch-payers-api-openapi.yml",
+    "pinch-payment-links-api-openapi.yml",
+    "pinch-payments-api-openapi.yml",
+    "pinch-plans-api-openapi.yml",
+    "pinch-refund-api-openapi.yml",
+    "pinch-refunds-api-openapi.yml",
+    "pinch-sources-api-openapi.yml",
+    "pinch-subscriptions-api-openapi.yml",
+    "pinch-test-api-openapi.yml",
+    "pinch-transfers-api-openapi.yml",
+    "pinch-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "pinch-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+15 apis, 16 total)"
+  ],
+  "skipped": []
+}

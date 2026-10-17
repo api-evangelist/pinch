@@ -1,0 +1,72 @@
+openapi: 3.2.0
+info:
+  title: Pinch Payment Links API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 41 operation(s) read from 30 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Pinch has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 27
+    documentation: 14
+    pages-with-code: 22
+    pages-read: 30
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.getpinch.com.au/reference/tokens.md
+  - https://docs.getpinch.com.au/reference/tokenise.md
+  - https://docs.getpinch.com.au/reference/save-payer.md
+  - https://docs.getpinch.com.au/reference/get-payment.md
+  - https://docs.getpinch.com.au/reference/list-payers.md
+  - https://docs.getpinch.com.au/reference/delete-payer.md
+  - https://docs.getpinch.com.au/reference/save-payment.md
+  - https://docs.getpinch.com.au/reference/realtime-payment.md
+  - https://docs.getpinch.com.au/reference/delete-payment-source.md
+  - https://docs.getpinch.com.au/reference/list-payments-for-payer.md
+  - https://docs.getpinch.com.au/reference/list-processed-payments.md
+  - https://docs.getpinch.com.au/reference/list-scheduled-payments.md
+  - https://docs.getpinch.com.au/docs/application-authentication
+  - https://docs.getpinch.com.au/docs/credit-card-payments
+  - https://docs.getpinch.com.au/docs/direct-debit-payments
+  - https://docs.getpinch.com.au/docs/capturejs-tokenisation
+  - https://docs.getpinch.com.au/docs/plans-and-subscriptions
+  - https://docs.getpinch.com.au/docs/payment-links
+  - https://docs.getpinch.com.au/docs/transfers-in-pinch-payments
+  - https://docs.getpinch.com.au/docs/refunds
+  - https://docs.getpinch.com.au/docs/metadata
+  - https://docs.getpinch.com.au/docs/surcharging-fees-in-pinch
+  - https://docs.getpinch.com.au/docs/managed-merchants
+  - https://docs.getpinch.com.au/docs/managed-merchants-payments-guide
+  - https://docs.getpinch.com.au/docs/xero-invoice-automation
+  - https://docs.getpinch.com.au/docs/preview-fees-before-charging
+  - https://docs.getpinch.com.au/docs/vault-payment-source
+  - https://docs.getpinch.com.au/docs/handle-dishonoured-direct-debit
+  - https://docs.getpinch.com.au/docs/full-subscription-lifecycle
+  - https://docs.getpinch.com.au/docs/managed-merchant-onboarding
+servers:
+- url: https://api.getpinch.com.au
+security:
+- apiKey: []
+tags:
+- name: Payment Links
+paths:
+  /payment-links:
+    post:
+      operationId: post_payment_links
+      tags:
+      - Payment Links
+      summary: Generate the link
+      x-source: https://docs.getpinch.com.au/docs/payment-links
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization

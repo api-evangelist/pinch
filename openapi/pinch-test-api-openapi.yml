@@ -1,0 +1,331 @@
+openapi: 3.2.0
+info:
+  title: Pinch Test API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 41 operation(s) read from 30 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Pinch has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 27
+    documentation: 14
+    pages-with-code: 22
+    pages-read: 30
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.getpinch.com.au/reference/tokens.md
+  - https://docs.getpinch.com.au/reference/tokenise.md
+  - https://docs.getpinch.com.au/reference/save-payer.md
+  - https://docs.getpinch.com.au/reference/get-payment.md
+  - https://docs.getpinch.com.au/reference/list-payers.md
+  - https://docs.getpinch.com.au/reference/delete-payer.md
+  - https://docs.getpinch.com.au/reference/save-payment.md
+  - https://docs.getpinch.com.au/reference/realtime-payment.md
+  - https://docs.getpinch.com.au/reference/delete-payment-source.md
+  - https://docs.getpinch.com.au/reference/list-payments-for-payer.md
+  - https://docs.getpinch.com.au/reference/list-processed-payments.md
+  - https://docs.getpinch.com.au/reference/list-scheduled-payments.md
+  - https://docs.getpinch.com.au/docs/application-authentication
+  - https://docs.getpinch.com.au/docs/credit-card-payments
+  - https://docs.getpinch.com.au/docs/direct-debit-payments
+  - https://docs.getpinch.com.au/docs/capturejs-tokenisation
+  - https://docs.getpinch.com.au/docs/plans-and-subscriptions
+  - https://docs.getpinch.com.au/docs/payment-links
+  - https://docs.getpinch.com.au/docs/transfers-in-pinch-payments
+  - https://docs.getpinch.com.au/docs/refunds
+  - https://docs.getpinch.com.au/docs/metadata
+  - https://docs.getpinch.com.au/docs/surcharging-fees-in-pinch
+  - https://docs.getpinch.com.au/docs/managed-merchants
+  - https://docs.getpinch.com.au/docs/managed-merchants-payments-guide
+  - https://docs.getpinch.com.au/docs/xero-invoice-automation
+  - https://docs.getpinch.com.au/docs/preview-fees-before-charging
+  - https://docs.getpinch.com.au/docs/vault-payment-source
+  - https://docs.getpinch.com.au/docs/handle-dishonoured-direct-debit
+  - https://docs.getpinch.com.au/docs/full-subscription-lifecycle
+  - https://docs.getpinch.com.au/docs/managed-merchant-onboarding
+servers:
+- url: https://api.getpinch.com.au
+security:
+- apiKey: []
+tags:
+- name: Test
+paths:
+  /test/fees/calculate:
+    get:
+      operationId: get_test_fees_calculate
+      tags:
+      - Test
+      summary: GET /test/fees/calculate
+      x-source: https://docs.getpinch.com.au/docs/surcharging-fees-in-pinch
+      parameters:
+      - name: amount
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: sourceType
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: surcharge
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP GET https://api.getpinch.com.au/test/fees/calculate?amount=10000&sourceType=credit-card&surcharge=true
+  /test/merchants/{merchantid}:
+    post:
+      operationId: post_test_merchants_merchantid
+      tags:
+      - Test
+      summary: POST /test/merchants/managed
+      x-source: https://docs.getpinch.com.au/docs/managed-merchant-onboarding
+      parameters:
+      - name: merchantid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP POST https://api.getpinch.com.au/test/merchants/managed
+        collapsed_from: 2 example path(s) differing only at merchantId
+  /test/payers/{id}:
+    delete:
+      operationId: delete_test_payers_id
+      tags:
+      - Test
+      summary: DELETE /test/payers/{id}
+      x-source: https://docs.getpinch.com.au/reference/delete-payer.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl\",\n              \"code\": \"curl https://api.getpinch.com.au/test/payers/{id} \\\\\\n -H \\\"Authorization: Bearer ...\\\" \\\\\\n -X DELETE\"\n            }\n          ],\n          \"samples-languages\": [\n            \"csharp\",\n            \"curl\"\n          ]\n        }\n      }\n    }\n  },\n  \"x-readme\": {\n    \"headers\": [\n      {\n        \"key\": \"pinch-version\",\n        \"value\": \"2020.1\"\n      }\n    ],\n    \"explo"
+  /test/payers/{id}/sources/{sourceid}:
+    delete:
+      operationId: delete_test_payers_id_sources_sourceid
+      tags:
+      - Test
+      summary: DELETE /test/payers/{id}/sources/{sourceid}
+      x-source: https://docs.getpinch.com.au/reference/delete-payment-source.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sourceid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl\",\n              \"code\": \"curl https://api.getpinch.com.au/test/payers/{id}/sources/{sourceid} \\\\\\n -H \\\"Authorization: Bearer ...\\\" \\\\\\n -X DELETE\"\n            }\n          ],\n          \"samples-languages\": [\n            \"csharp\",\n            \"curl\"\n          ]\n        }\n      }\n    }\n  },\n  \"x-readme\": {\n    \"headers\": [\n      {\n        \"key\": \"pinch-version\",\n        \"value\": \"2020.1\"\n      "
+  /test/payments/payer/id:
+    get:
+      operationId: get_test_payments_payer_id
+      tags:
+      - Test
+      summary: GET /test/payments/payer/id
+      x-source: https://docs.getpinch.com.au/reference/list-payments-for-payer.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl\",\n              \"code\": \"curl --request GET \\\\\\n  --url https://api.getpinch.com.au/test/payments/payer/id\"\n            }\n          ],\n          \"samples-languages\": [\n            \"csharp\",\n            \"curl\"\n          ]\n        }\n      }\n    }\n  },\n  \"x-readme\": {\n    \"headers\": [\n      {\n        \"key\": \"pinch-version\",\n        \"value\": \"2020.1\"\n      }\n    ],\n    \"explorer-enabled\": true,\n "
+  /test/payments/realtime:
+    post:
+      operationId: post_test_payments_realtime
+      tags:
+      - Test
+      summary: POST /test/payments/realtime
+      x-source: https://docs.getpinch.com.au/docs/credit-card-payments
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP POST https://api.getpinch.com.au/test/payments/realtime
+  /test/payments/{id}:
+    get:
+      operationId: get_test_payments_id
+      tags:
+      - Test
+      summary: GET /test/payments/{id}
+      x-source: https://docs.getpinch.com.au/reference/get-payment.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl\",\n              \"code\": \"curl https://api.getpinch.com.au/test/payments/{id} \\n -H \\\"Authorization: Bearer ...\\\"\"\n            }\n          ],\n          \"samples-languages\": [\n            \"csharp\",\n            \"curl\"\n          ]\n        }\n      }\n    }\n  },\n  \"x-readme\": {\n    \"headers\": [\n      {\n        \"key\": \"pinch-version\",\n        \"value\": \"2020.1\"\n      }\n    ],\n    \"explorer-enabled\": t"
+  /test/plans/pln_XXXXXXXX/calculated-payments:
+    get:
+      operationId: get_test_plans_pln_XXXXXXXX_calculated_payments
+      tags:
+      - Test
+      summary: GET /test/plans/pln_XXXXXXXX/calculated-payments
+      x-source: https://docs.getpinch.com.au/docs/full-subscription-lifecycle
+      parameters:
+      - name: startDate
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: totalAmount
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTestPlansPlnXxxxxxxxCalculatedPaymentsResponse'
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP GET https://api.getpinch.com.au/test/plans/pln_XXXXXXXX/calculated-payments?startDate=2026-08-01&totalAmount=49000
+  /test/subscriptions/payer/pyr_XXXXXXXX:
+    get:
+      operationId: get_test_subscriptions_payer_pyr_XXXXXXXX
+      tags:
+      - Test
+      summary: GET /test/subscriptions/payer/pyr_XXXXXXXX
+      x-source: https://docs.getpinch.com.au/docs/full-subscription-lifecycle
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP GET https://api.getpinch.com.au/test/subscriptions/payer/pyr_XXXXXXXX
+  /test/subscriptions/sub_XXXXXXXX:
+    delete:
+      operationId: delete_test_subscriptions_sub_XXXXXXXX
+      tags:
+      - Test
+      summary: DELETE /test/subscriptions/sub_XXXXXXXX
+      x-source: https://docs.getpinch.com.au/docs/full-subscription-lifecycle
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP DELETE https://api.getpinch.com.au/test/subscriptions/sub_XXXXXXXX
+  /test/{testid}:
+    get:
+      operationId: get_test_testid
+      tags:
+      - Test
+      summary: GET /test/payers
+      x-source: https://docs.getpinch.com.au/reference/save-payer.md
+      parameters:
+      - name: testid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl\",\n              \"code\": \"curl https://api.getpinch.com.au/test/payers \\n -H \\\"Authorization: Bearer ...\\\" \\n -H \\\"Content-Type: application/json\\\" \\n -d \\\"{\\n        'firstName': 'Test', \\n        'lastName': 'WebSample3',  \\n        'emailAddress': 'testwebsample@mailinator.com',  \\n        'mobileNumber': '0400123456',\\n     }\\\"\"\n            }\n          ],\n          \"samples-languages\": [\n "
+        collapsed_from: 3 example path(s) differing only at testId
+    post:
+      operationId: post_test_testid
+      tags:
+      - Test
+      summary: POST /test/calculate-fees
+      x-source: https://docs.getpinch.com.au/docs/preview-fees-before-charging
+      parameters:
+      - name: testid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTestTestidResponse'
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP POST https://api.getpinch.com.au/test/calculate-fees
+        collapsed_from: 7 example path(s) differing only at testId
+components:
+  schemas:
+    PostTestTestidResponse:
+      type: object
+      properties:
+        amount:
+          type: integer
+        feeAmount:
+          type: integer
+        taxAmount:
+          type: integer
+        netAmount:
+          type: integer
+    GetTestPlansPlnXxxxxxxxCalculatedPaymentsResponse:
+      type: object
+      properties:
+        payments:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+                format: date
+              amount:
+                type: integer
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization

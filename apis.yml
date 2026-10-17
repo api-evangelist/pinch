@@ -95,17 +95,16 @@ apis:
   humanURL: https://docs.getpinch.com.au/reference
   baseURL: null
   aid: pinch:pinch-api-2
-- aid: pinch:pinch-api
-  name: Pinch API
-  description: 'Pinch API as documented publicly: 41 operations. Contract generated from the documentation by API Evangelist (2026-10-12); not
-
-    the provider''s own document.'
-  humanURL: https://docs.getpinch.com.au/reference/tokens.md
+- aid: pinch:pinch-calculate-fees-api
+  name: Pinch Calculate Fees API
+  description: The Calculate Fees API from Pinch — 1 operation(s) for calculate fees.
+  humanURL: https://docs.getpinch.com.au/reference
   baseURL: https://api.getpinch.com.au
+  tags:
+  - Calculate Fees
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/pinch-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/pinch-calculate-fees-api-openapi.yml
   - type: JSONSchema
     url: json-schema/pinch-post-subscriptions-request-schema.json
   - type: JSONSchema
@@ -118,7 +117,314 @@ apis:
     url: json-schema/pinch-post-plans-request-schema.json
   - type: JSONSchema
     url: json-schema/pinch-post-refunds-response-schema.json
-
+- aid: pinch:pinch-connect-api
+  name: Pinch Connect API
+  description: The Connect API from Pinch — 1 operation(s) for connect.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Connect
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-connect-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-fees-api
+  name: Pinch Fees API
+  description: The Fees API from Pinch — 1 operation(s) for fees.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Fees
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-fees-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-merchants-api
+  name: Pinch Merchants API
+  description: The Merchants API from Pinch — 2 operation(s) for merchants.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Merchants
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-merchants-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-payers-api
+  name: Pinch Payers API
+  description: The Payers API from Pinch — 2 operation(s) for payers.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Payers
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-payers-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-payment-links-api
+  name: Pinch Payment Links API
+  description: The Payment Links API from Pinch — 1 operation(s) for payment links.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Payment Links
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-payment-links-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-payments-api
+  name: Pinch Payments API
+  description: The Payments API from Pinch — 3 operation(s) for payments.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-payments-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-plans-api
+  name: Pinch Plans API
+  description: The Plans API from Pinch — 2 operation(s) for plans.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-plans-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-refund-api
+  name: Pinch Refund API
+  description: The Refund API from Pinch — 1 operation(s) for refund.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Refund
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-refund-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-refunds-api
+  name: Pinch Refunds API
+  description: The Refunds API from Pinch — 2 operation(s) for refunds.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Refunds
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-refunds-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-sources-api
+  name: Pinch Sources API
+  description: The Sources API from Pinch — 1 operation(s) for sources.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-sources-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-subscriptions-api
+  name: Pinch Subscriptions API
+  description: The Subscriptions API from Pinch — 3 operation(s) for subscriptions.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-subscriptions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-test-api
+  name: Pinch Test API
+  description: The Test API from Pinch — 11 operation(s) for test.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Test
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-test-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-transfers-api
+  name: Pinch Transfers API
+  description: The Transfers API from Pinch — 3 operation(s) for transfers.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Transfers
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-transfers-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
+- aid: pinch:pinch-webhooks-api
+  name: Pinch Webhooks API
+  description: The Webhooks API from Pinch — 1 operation(s) for webhooks.
+  humanURL: https://docs.getpinch.com.au/reference
+  baseURL: https://api.getpinch.com.au
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/pinch-webhooks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pinch-post-subscriptions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-calculate-fees-response-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-merchants-merchantid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-plans-request-schema.json
+  - type: JSONSchema
+    url: json-schema/pinch-post-refunds-response-schema.json
 x-backed-by:
 - starting-line-vc
 

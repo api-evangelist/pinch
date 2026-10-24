@@ -24,7 +24,15 @@ created: '2026-10-12'
 
 modified: '2026-10-12'
 
+x-docs-platform: readme
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-17
 tags:
+- Company
+- Payments
+- Medical Spa
+- Health Tech
+tags_raw:
 - Company
 - Payments
 - MedicalSpa
@@ -343,6 +351,8 @@ apis:
   humanURL: https://docs.getpinch.com.au/reference
   baseURL: https://api.getpinch.com.au
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -364,7 +374,8 @@ apis:
   description: The Test API from Pinch — 11 operation(s) for test.
   humanURL: https://docs.getpinch.com.au/reference
   baseURL: https://api.getpinch.com.au
-  tags:
+  tags: []
+  tags_raw:
   - Test
   properties:
   - type: OpenAPI
@@ -409,6 +420,8 @@ apis:
   humanURL: https://docs.getpinch.com.au/reference
   baseURL: https://api.getpinch.com.au
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
